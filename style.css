@@ -1,10 +1,12 @@
 * {
-  box-sizeing : border-box;
+  box-sizing : border-box;
 }
 
+/* -----Header----- */
+
 header {
-  height : 50px;
-  border-bottom-color : 2px black solid;
+  height : 30px;
+  border-bottom-color : 100px #000000 solid;
 }
 
 .nav {
@@ -21,20 +23,44 @@ header {
 .nav-item {
   width : 100px;
   height : 30px;
+  text-align : center;
   background-color : grey;
   margin-left : 10px;
 }
 
-.left-main {
-  align-items : left; 
+/* -----Main----- */
+
+.main {
+  display : flex;
 }
 
-.main-title {
+.left-main {
+  align-items : center;
+  text-align : center;
+  width : 560px;
+  height : 1000px;
+  background-color : #dfdfdf;
+  margin-top : 10px; 
+}
+
+.left-main-title {
+  margin-top : 300px;
   font-size : 20px;
   font-weight : 300;
 }
 
-.main-subtitle {
+.left-main-subtitle {
   font-size : 40px;
   font-weight : bold;
 }
+
+/* Typing_effect */
+
+
+.right-main {
+  margin-top : 10px;
+  width : 1360px;
+  height : 1000px;
+  background-color : #cfcfcf;
+}
+
