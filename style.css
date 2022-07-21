@@ -1,6 +1,13 @@
-.nav {
+* {
+  box-sizeing : border-box;
+}
+
+header {
   height : 50px;
-  border-bottom : 1px solid black;
+  border-bottom-color : 2px black solid;
+}
+
+.nav {
   display : flex;
   align-items : center;
 }
@@ -12,6 +19,9 @@
 }
 
 .nav-item {
+  width : 100px;
+  height : 30px;
+  background-color : grey;
   margin-left : 10px;
 }
 
