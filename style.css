@@ -6,26 +6,28 @@
 
 header {
   height : 30px;
-  border-bottom-color : 100px #000000 solid;
 }
 
 .nav {
+  width : 1887px;
+  position : fixed;
   display : flex;
   align-items : center;
+  background : #adadad;
 }
 
 .nav-items {
   display : flex;
-  margin-left : auto;
+  margin-left : 1300px;
   margin-right : 10px;
 }
 
 .nav-item {
   width : 100px;
-  height : 30px;
+  height : 35px;
   text-align : center;
   background-color : grey;
-  margin-left : 10px;
+  margin-left : 50px;
 }
 
 /* -----Main----- */
@@ -46,7 +48,7 @@ header {
 .left-main-title {
   margin-top : 300px;
   font-size : 20px;
-  font-weight : 300;
+  font-weight : 1px;
 }
 
 .left-main-subtitle {
@@ -54,8 +56,9 @@ header {
   font-weight : bold;
 }
 
-/* Typing_effect */
-
+.left-develop-text {
+  font-size : 20px;
+}
 
 .right-main {
   margin-top : 10px;
