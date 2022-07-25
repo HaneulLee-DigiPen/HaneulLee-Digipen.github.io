@@ -2,34 +2,41 @@
 
 header {
   --header-border-px : 10px;
-  width : 99%;
-  height : 15%;
+  z-index : 10;;
+  width : 1890px;
+  height : 100px;
   position : fixed;
   font-weight : bold;
   color : #ffffff;
 }
 
 .nav {
+  margin-top : 10px;
   height : 50%;
   display : flex;
   align-items : center;
+  vertical-align : middle;
   border-radius : var(--header-border-px);
   background : #003366;
-  opacity : 0.8;
+  opacity : 0.95;
 }
 
 .nav-items {
   display : flex;
   width : 100%;
+  opacity : 1.0;
 }
 
 .nav-item-name {
-  margin-left : 2%;
-  font-size : x-large;
+  margin-left : 10px;
+  font-size : 40px;
+  vertical-align : middle;
 }
 
 .nav-item-profile {
-  margin-left : 40%;
+  position : absolute;
+  top : 15px;
+  margin-left : 1000px;
   background : #336699;
   border-radius : var(--header-border-px);
   text-align : center;
@@ -37,7 +44,9 @@ header {
 }
 
 .nav-item-about {
-  margin-left : 10%;
+  position : absolute;
+  top : 15px;
+  margin-left : 1300px;
   background : #336699;
   border-radius : var(--header-border-px);
   text-align : center;
@@ -45,9 +54,32 @@ header {
 }
 
 .nav-item-works {
-  margin-left : 10%;
+  position : absolute;
+  top : 15px;
+  margin-left : 1600px;
   background : #336699;
   border-radius : var(--header-border-px);
   text-align : center;
   width : 80px;
+}
+
+body {
+  z-index : 9;
+}
+
+.left-body {
+  position : absolute;
+  width : 600px;
+  height : 1000px;
+  background : #101010;
+  border-radius : 10px 0px 0px 10px / 10px 0px 0px 10px;
+}
+
+.right-body {
+  position : absolute;
+  left : 600px;
+  width : 1300px;
+  height : 1000px;
+  background : #303030;
+  border-radius : 0px 10px 10px 0px / 0px 10px 10px 0px;
 }
