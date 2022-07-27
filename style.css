@@ -72,7 +72,7 @@ body {
   position : absolute;
   width : 1890px;
   height : 1000px;
-  background-image : url(assets/background.jpg);
+  background-image : url(Assets/background.jpg);
   border-radius : 10px 10px 10px 10px / 10px 10px 10px 10px;
 }
 
