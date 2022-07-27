@@ -2,7 +2,7 @@
 
 header {
   --header-border-px : 10px;
-  z-index : 10;;
+  z-index : 10;
   width : 1890px;
   height : 100px;
   position : fixed;
@@ -64,22 +64,25 @@ header {
 }
 
 body {
-  z-index : 9;
+  
+}
+
+.main-body {
+  z-index : 8;
+  position : absolute;
+  width : 1890px;
+  height : 1000px;
+  background-image : url(assets/background.jpg);
+  border-radius : 10px 10px 10px 10px / 10px 10px 10px 10px;
+  border-radius : 10px 0px 0px 10px / 10px 0px 0px 10px;
+  
 }
 
 .left-body {
+  z-index : 9;
   position : absolute;
   width : 600px;
   height : 1000px;
-  background : #101010;
-  border-radius : 10px 0px 0px 10px / 10px 0px 0px 10px;
-}
-
-.right-body {
-  position : absolute;
-  left : 600px;
-  width : 1300px;
-  height : 1000px;
-  background : #303030;
-  border-radius : 0px 10px 10px 0px / 0px 10px 10px 0px;
+  background : #000000;
+  opacity : 0.8;
 }
