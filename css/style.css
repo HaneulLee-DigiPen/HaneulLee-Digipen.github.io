@@ -1,0 +1,130 @@
+/* -----Header----- */
+
+header {
+  --header-border-px : 10px;
+  z-index : 10;
+  width : 1890px;
+  height : 100px;
+  position : fixed;
+  font-weight : bold;
+  color : #ffffff;
+}
+
+.nav {
+  margin-top : 10px;
+  height : 50%;
+  display : flex;
+  align-items : center;
+  vertical-align : middle;
+  border-radius : var(--header-border-px);
+  background : #003366;
+  opacity : 0.95;
+}
+
+.nav-items {
+  display : flex;
+  width : 100%;
+  opacity : 1.0;
+}
+
+.nav-item-name {
+  margin-left : 10px;
+  font-size : 40px;
+  vertical-align : middle;
+}
+
+.nav-item-profile {
+  position : absolute;
+  top : 15px;
+  margin-left : 1000px;
+  background : #336699;
+  border-radius : var(--header-border-px);
+  text-align : center;
+  width : 80px;
+}
+
+.nav-item-about {
+  position : absolute;
+  top : 15px;
+  margin-left : 1300px;
+  background : #336699;
+  border-radius : var(--header-border-px);
+  text-align : center;
+  width : 80px;
+}
+
+.nav-item-works {
+  position : absolute;
+  top : 15px;
+  margin-left : 1600px;
+  background : #336699;
+  border-radius : var(--header-border-px);
+  text-align : center;
+  width : 80px;
+}
+
+body {
+  
+}
+
+.main-body {
+  z-index : 8;
+  position : absolute;
+  width : 1890px;
+  height : 1000px;
+  background-image : url(../assets/background.jpg);
+  border-radius : 10px 10px 10px 10px / 10px 10px 10px 10px;
+}
+
+.left-body {
+  z-index : 9;
+  position : absolute;
+  width : 600px;
+  height : 1000px;
+  background : #000000;
+  opacity : 0.8;
+  border-radius : 10px 0px 0px 10px / 10px 0px 0px 10px;
+  align-items : center;
+}
+
+.left-body-subtitle {
+  margin-top : 400px;
+  text-align : center;
+  color : white;
+}
+
+.left-body-title {
+  font-size : 40px;
+  text-align : center;
+  color : white;
+}
+
+.left-body-typing {
+  margin-top : 10px;
+  color : white;
+  text-align : center;
+}
+
+.typing-txt {
+  display : none;
+}
+
+.typing-txt ul {
+  list-style : none;
+}
+
+.typing {  
+  color : white;
+  display: inline; 
+  animation-name: cursor; 
+  animation-duration: 0.3s; 
+  animation-iteration-count: infinite; 
+  font-size: 18px;
+  line-height:1;
+} 
+
+@keyframes cursor { 
+  0%{border-right: 1px solid #000} 
+  50%{border-right: 1px solid #fff} 
+  100%{border-right: 1px solid #000} 
+}
