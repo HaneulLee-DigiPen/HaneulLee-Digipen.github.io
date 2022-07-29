@@ -105,15 +105,7 @@ body {
   text-align : center;
 }
 
-.typing-txt {
-  display : none;
-}
-
-.typing-txt ul {
-  list-style : none;
-}
-
-.typing {  
+.typing_effect {  
   color : white;
   display: inline; 
   animation-name: cursor; 

@@ -1,62 +1,50 @@
-var typingBool = false; 
-var typingIdx=0; 
-var liIndex = 0;
-var liLength = $(".typing-txt>ul>li").length;
-var del = -1;
-var repeatInt= null;
-var tyInt = null;
+const $typing_effect = document.querySelector(".typing_effect");
 
+console.log($typing_effect);
 
-// 타이핑될 텍스트를 가져온다 
-var typingTxt = $(".typing-txt>ul>li").eq(liIndex).text(); 
+// 글자 모음
+const letters = ["C++", "C", "C#", "HTML", "CSS", "JavaScript"];
 
-typingTxt=typingTxt.split(""); // 한글자씩 자른다. 
+// 글자 입력 속도
+const speed = 100;
+let i = 0;
 
-if(typingBool==false){ 
-  // 타이핑이 진행되지 않았다면 
-    typingBool=true; 
-    tyInt = setInterval(typing,200); // 첫번재 반복동작 
-} 
-     
-function typing(){ 
-  if(typingIdx<typingTxt.length){ 
-    // 타이핑될 텍스트 길이만큼 반복 
-   $(".typing").append(typingTxt[typingIdx]); 
-    // 한글자씩 이어준다. 
-     typingIdx++; 
-    if(typingIdx == typingTxt.length){
-      //첫번째 단어가 써지면 1분쉰다.
-        clearInterval(tyInt);
-         setTimeout(function(){
-           tyInt = setInterval(typing,200);
-         },1000);
-       }
-   } else{ 
-     
-     //한문장이끝나면
-       if(-typingTxt.length-1 < del ){
-         //한글자씩 지운다.
-          $(".typing").html(typingTxt.slice(0, del))
-          del--;
-       }else{
-         if(liIndex >= liLength-1){
-              liIndex=0;
-         }else{
-           liIndex++;
-         }
-         
-         //변수초기화 
-         typingIdx=0;
-         del= -1;
-         typingTxt = $(".typing-txt>ul>li").eq(liIndex).text(); 
-         
-         //1분후 다음분장 타이핑 
-         clearInterval(tyInt);
-         setTimeout(function(){
-           tyInt = setInterval(typing,200);
-         },1000);
-       }
-     
+// 타이핑 효과
+const typing = async () => {  
+  const letter = letters[i].split("");
+  
+  while (letter.length) {
+    await wait(speed);
+    $typing_effect.innerHTML += letter.shift(); 
+  }
+  
+  // 잠시 대기
+  await wait(800);
+  
+  // 지우는 효과
+  if (letters[i + 1]) remove();
+}
 
-    } 
-}  
+// 글자 지우는 효과
+const remove = async () => {
+  const letter = letters[i].split("");
+  
+  while (letter.length) {
+    await wait(speed);
+    
+    letter.pop();
+    $typing_effect.innerHTML = letter.join(""); 
+  }
+  
+  // 다음 순서의 글자로 지정, 타이핑 함수 다시 실행
+  i++;
+  typing();
+}
+
+// 딜레이 기능 ( 마이크로초 )
+function wait(ms) {
+  return new Promise(res => setTimeout(res, ms))
+}
+
+// 초기 실행
+setTimeout(typing, 2700);
